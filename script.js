@@ -5,6 +5,8 @@
 // ("Key", "Value") beides required
 // localStorage.setItem("lastname", "smith") -> reinschreiben
 // localStorage.getItem("lastname") -> auslesen
+// localStorage.setItem("myData", JSON.stringify(myData)); -> JSON.Stringify
+//  schiebt es als String in einer Json "," seperiert in das Array myData
 
 // Test Array
 let myData = ["Banana", "not Banana", "Apple"];
@@ -36,7 +38,11 @@ function saveData() {
   inputRef.value = "";
 }
 
-function saveToLocalStorage() {}
+function saveToLocalStorage() {
+  // setzt eine Key & Value in den localStorage.
+  //Value wird als JSON, als String "," Seperiert in das Array my Datat geschrieben.
+  localStorage.setItem("myData", JSON.stringify(myData));
+}
 
 function getFromLocalStorage() {}
 
