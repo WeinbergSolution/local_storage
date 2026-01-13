@@ -44,7 +44,17 @@ function saveToLocalStorage() {
   localStorage.setItem("myData", JSON.stringify(myData));
 }
 
-function getFromLocalStorage() {}
+// Function um Einträge aus dem LocalStorage aus zu lesen
+function getFromLocalStorage() {
+  // JSON.parse(localStorage.getItem("myData")) -> parset das ganze zurück in ein Objekt bzw Array und speichert es in myArray.
+  let myArray = JSON.parse(localStorage.getItem("myData"));
+  // ist myArray ungleich null dann mach nix ... sonst speicher myArray in myData.
+  if (myArray != null) {
+  } else {
+    // speichert es dann in myData
+    myData = myArray;
+  }
+}
 
 // inhalte in etwas rendern.
 function render() {
